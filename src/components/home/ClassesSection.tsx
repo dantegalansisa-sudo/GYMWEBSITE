@@ -27,7 +27,7 @@ const classes: ClassBlock[] = [
     buttonText: "Inscríbete",
     whatsappMessage:
       "Hola Roca Gimnasio, quiero información sobre la membresía de pesas",
-    image: null,
+    image: "/images/pesas.jpg",
     imageAlt: "Zona de pesas Roca Gimnasio",
     reverse: false,
     bg: "bg-white",

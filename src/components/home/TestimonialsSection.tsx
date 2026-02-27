@@ -23,10 +23,10 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-white py-28 lg:py-36">
+    <section className="bg-white py-32 lg:py-40">
       <div className="mx-auto max-w-6xl px-8">
         <ScrollReveal>
-          <div className="mb-16 text-center">
+          <div className="mb-20 text-center">
             <h2 className="font-[family-name:var(--font-oswald)] text-4xl font-bold uppercase text-roca-black sm:text-5xl lg:text-6xl">
               Lo Que Dicen{" "}
               <span className="text-roca-orange">Nuestros Miembros</span>
@@ -37,7 +37,7 @@ export default function TestimonialsSection() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, index) => (
             <ScrollReveal key={t.name} delay={index * 0.15}>
-              <div className="rounded-xl border border-roca-gray-border bg-white p-8 transition-all hover:border-roca-orange/30 hover:shadow-md">
+              <div className="rounded-2xl border border-gray-100 bg-white p-10 shadow-md transition-all hover:border-roca-orange/30 hover:shadow-lg">
                 <Quote className="mb-6 h-8 w-8 text-roca-orange/30" />
                 <p className="mb-6 text-lg leading-relaxed text-roca-gray-dark">
                   &ldquo;{t.text}&rdquo;

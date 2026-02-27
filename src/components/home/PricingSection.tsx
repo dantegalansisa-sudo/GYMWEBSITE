@@ -48,10 +48,10 @@ const plans = [
 
 export default function PricingSection() {
   return (
-    <section className="bg-roca-light py-28 lg:py-36">
+    <section className="bg-roca-light py-32 lg:py-40">
       <div className="mx-auto max-w-6xl px-8">
         <ScrollReveal>
-          <div className="mb-16 text-center">
+          <div className="mb-20 text-center">
             <h2 className="font-[family-name:var(--font-oswald)] text-4xl font-bold uppercase text-roca-black sm:text-5xl lg:text-6xl">
               Planes <span className="text-roca-orange">Y Precios</span>
             </h2>
@@ -62,10 +62,10 @@ export default function PricingSection() {
           {plans.map((plan, index) => (
             <ScrollReveal key={plan.name} delay={index * 0.15}>
               <div
-                className={`relative flex h-full flex-col rounded-2xl border bg-white p-10 transition-all hover:shadow-lg ${
+                className={`relative flex h-full flex-col rounded-2xl border bg-white p-10 shadow-md transition-all ${
                   plan.popular
-                    ? "border-roca-orange shadow-roca-orange/10 lg:scale-105"
-                    : "border-roca-gray-border"
+                    ? "border-2 border-roca-orange shadow-lg lg:scale-105"
+                    : "border-roca-gray-border hover:shadow-lg"
                 }`}
               >
                 {plan.popular && (

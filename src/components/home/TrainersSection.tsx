@@ -12,14 +12,14 @@ const trainers = [
       "Fundador de Roca Gimnasio y líder de la comunidad ROCA. Apasionado por el fitness y la nutrición deportiva.",
   },
   {
-    image: null,
+    image: "/images/mangu.jpg",
     name: "Coach Mangu Valera",
     role: "Instructor de Boxeo — Campeón Mundial",
     description:
       "Campeón mundial de boxeo que trae su disciplina y experiencia al ring de Roca Gimnasio.",
   },
   {
-    image: null,
+    image: "/images/willy.jpg",
     name: "Instructor Willy",
     role: "Instructor de Zumba",
     description:
