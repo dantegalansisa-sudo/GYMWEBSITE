@@ -2,99 +2,109 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Users, Clock, Dumbbell } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="inicio" className="relative h-screen w-full overflow-hidden">
-      {/* Background Image */}
-      <Image
-        src="/images/hero-group.jpg"
-        alt="Comunidad Roca Gimnasio"
-        fill
-        className="object-cover"
-        priority
-        quality={90}
-      />
-
-      {/* Overlay gradients */}
-      <div className="absolute inset-0 bg-gradient-to-t from-roca-black via-roca-black/50 to-roca-black/30" />
-      <div className="absolute inset-0 bg-gradient-to-r from-roca-black/80 via-roca-black/40 to-transparent" />
-
-      {/* Decorative arrows */}
-      <button
-        className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/20 p-3 text-white/40 transition-colors hover:border-roca-red hover:text-roca-red lg:left-8"
-        aria-label="Previous"
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      <button
-        className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/20 p-3 text-white/40 transition-colors hover:border-roca-red hover:text-roca-red lg:right-8"
-        aria-label="Next"
-      >
-        <ChevronRight className="h-6 w-6" />
-      </button>
-
-      {/* Content */}
-      <div className="relative z-10 flex h-full items-end pb-24 lg:pb-32">
-        <div className="mx-auto w-full max-w-7xl px-4 lg:px-8">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-roca-red/30 bg-roca-red/10 px-4 py-2"
-          >
-            <span className="text-lg">💪</span>
-            <span className="font-[family-name:var(--font-oswald)] text-xs uppercase tracking-widest text-roca-red">
+    <section id="inicio" className="bg-white pt-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid min-h-[85vh] items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Left — Text */}
+          <div className="order-2 lg:order-1">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="mb-4 inline-flex items-center gap-2 rounded-full border border-roca-orange/30 bg-roca-orange-light px-4 py-2 font-[family-name:var(--font-oswald)] text-xs uppercase tracking-widest text-roca-orange"
+            >
               Nutrición &middot; Sport &middot; Y Más
-            </span>
-          </motion.div>
+            </motion.p>
 
-          {/* Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="mb-6 max-w-4xl font-[family-name:var(--font-oswald)] text-5xl font-bold uppercase leading-[0.95] text-white sm:text-6xl md:text-7xl lg:text-8xl"
-          >
-            Fuerza Que
-            <br />
-            Se <span className="text-roca-red">Respeta</span>
-          </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="mb-6 font-[family-name:var(--font-oswald)] text-5xl font-bold uppercase leading-[1] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl"
+            >
+              <span className="text-roca-gray">Eleva Tu</span>
+              <br />
+              <span className="text-roca-orange">Fitness</span>
+              <br />
+              <span className="text-roca-black">Con Roca</span>
+            </motion.h1>
 
-          {/* Paragraph */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="mb-8 max-w-xl text-base leading-relaxed text-roca-text-light sm:text-lg"
-          >
-            El gimnasio de ustedes. Cada día brindamos un servicio especial de
-            calidad. Pesas, boxeo, zumba y más en Km 13, Autopista Duarte.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="mb-8 max-w-md text-base leading-relaxed text-roca-gray sm:text-lg"
+            >
+              El gimnasio de ustedes. Cada día brindamos un servicio especial de
+              calidad. Pesas, boxeo, zumba y más en Km 13, Autopista Duarte.
+            </motion.p>
 
-          {/* Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="mb-10 flex flex-col gap-4 sm:flex-row"
+            >
+              <a
+                href="https://wa.me/18098205103?text=Hola%20Roca%20Gimnasio,%20quiero%20inscribirme"
+                target="_blank" rel="noopener noreferrer"
+                className="rounded-full bg-roca-orange px-8 py-4 text-center font-[family-name:var(--font-oswald)] text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-roca-orange-hover"
+              >
+                Inscríbete Ahora
+              </a>
+              <a
+                href="#clases"
+                className="rounded-full border-2 border-roca-gray-border px-8 py-4 text-center font-[family-name:var(--font-oswald)] text-sm font-bold uppercase tracking-wider text-roca-gray-dark transition-colors hover:border-roca-orange hover:text-roca-orange"
+              >
+                Ver Clases
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+              className="flex flex-wrap items-center gap-6 text-sm text-roca-gray"
+            >
+              <div className="flex items-center gap-2">
+                <Users className="h-5 w-5 text-roca-orange" />
+                <span><strong className="text-roca-black">3,400+</strong> Miembros</span>
+              </div>
+              <div className="h-4 w-px bg-roca-orange/30" />
+              <div className="flex items-center gap-2">
+                <Clock className="h-5 w-5 text-roca-orange" />
+                <span><strong className="text-roca-black">10+</strong> Años</span>
+              </div>
+              <div className="h-4 w-px bg-roca-orange/30" />
+              <div className="flex items-center gap-2">
+                <Dumbbell className="h-5 w-5 text-roca-orange" />
+                <span><strong className="text-roca-black">5</strong> Clases</span>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Right — Image */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-            className="flex flex-col gap-4 sm:flex-row"
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="relative order-1 lg:order-2"
           >
-            <a
-              href="https://wa.me/18098205103?text=Hola%20Roca%20Gimnasio,%20quiero%20inscribirme"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded bg-roca-red px-8 py-4 text-center font-[family-name:var(--font-oswald)] text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-roca-red-hover"
-            >
-              Inscríbete Ahora
-            </a>
-            <a
-              href="#clases"
-              className="rounded border border-white/30 px-8 py-4 text-center font-[family-name:var(--font-oswald)] text-sm font-bold uppercase tracking-wider text-white transition-colors hover:border-white hover:bg-white/10"
-            >
-              Ver Clases
-            </a>
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:aspect-[3/4]">
+              <Image
+                src="/images/hero-group.jpg"
+                alt="Comunidad Roca Gimnasio"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+            </div>
+            <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl border-2 border-roca-orange/30 lg:-bottom-6 lg:-right-6" />
           </motion.div>
         </div>
       </div>

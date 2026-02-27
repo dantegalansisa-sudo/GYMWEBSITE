@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import StatsCounter from "@/components/home/StatsCounter";
 import AboutSection from "@/components/home/AboutSection";
+import CEOSection from "@/components/home/CEOSection";
 import ClassesSection from "@/components/home/ClassesSection";
 import ScheduleSection from "@/components/home/ScheduleSection";
 import TrainersSection from "@/components/home/TrainersSection";
@@ -23,6 +24,7 @@ export default function Home() {
         <HeroSection />
         <StatsCounter />
         <AboutSection />
+        <CEOSection />
         <ClassesSection />
         <ScheduleSection />
         <TrainersSection />
