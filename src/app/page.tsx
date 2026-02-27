@@ -7,7 +7,6 @@ import CEOSection from "@/components/home/CEOSection";
 import ClassesSection from "@/components/home/ClassesSection";
 import ScheduleSection from "@/components/home/ScheduleSection";
 import TrainersSection from "@/components/home/TrainersSection";
-import ProgramsSection from "@/components/home/ProgramsSection";
 import NutritionSection from "@/components/home/NutritionSection";
 import CommunityGallery from "@/components/home/CommunityGallery";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
@@ -28,7 +27,6 @@ export default function Home() {
         <ClassesSection />
         <ScheduleSection />
         <TrainersSection />
-        <ProgramsSection />
         <NutritionSection />
         <CommunityGallery />
         <TestimonialsSection />

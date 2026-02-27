@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 
 const stats = [
-  { value: 3400, suffix: "+", label: "Miembros en la Comunidad" },
-  { value: 5, suffix: "+", label: "Clases Diferentes" },
-  { value: 3, suffix: "", label: "Entrenadores Profesionales" },
-  { value: 10, suffix: "+", label: "Años Formando Campeones" },
+  { value: 3400, suffix: "+", label: "Miembros" },
+  { value: 10, suffix: "+", label: "Años" },
+  { value: 5, suffix: "", label: "Clases" },
+  { value: 3, suffix: "", label: "Entrenadores" },
 ];
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
@@ -33,16 +33,21 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
     return () => clearInterval(timer);
   }, [isInView, target]);
 
-  return <span ref={ref}>{count.toLocaleString()}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {count.toLocaleString()}
+      {suffix}
+    </span>
+  );
 }
 
 export default function StatsCounter() {
   return (
-    <section className="bg-roca-light py-16 lg:py-20">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+    <section className="bg-white py-16 lg:py-20">
+      <div className="mx-auto max-w-6xl px-8">
+        <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-0 lg:divide-x lg:divide-roca-orange/20">
           {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
+            <div key={stat.label} className="px-10 text-center lg:px-16">
               <p className="font-[family-name:var(--font-oswald)] text-4xl font-bold text-roca-orange sm:text-5xl">
                 <CountUp target={stat.value} suffix={stat.suffix} />
               </p>
